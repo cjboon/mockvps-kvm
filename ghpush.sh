@@ -66,7 +66,7 @@ else
   echo "==> Files to be committed:"
   git status --short
   if [[ $assume_yes -eq 0 ]]; then
-    [[ -t 0 ]] || die "confirmation needed but stdin is not a terminal; re-run with -y"
+    [[ -t 0 ]] || { git reset -q; die "confirmation needed but stdin is not a terminal; re-run with -y"; }
     read -r -p "Commit and push these to $(git remote get-url origin)? [y/N] " reply
     [[ "$reply" =~ ^[yY]([eE][sS])?$ ]] || { git reset -q; die "aborted; nothing committed"; }
   fi
