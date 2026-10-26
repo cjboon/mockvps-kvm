@@ -32,8 +32,8 @@ The script adds your user to the `kvm` group if needed (uses `sudo`). It does no
 ## Quick start
 
 ```bash
-git clone <this repo>
-cd <this repo>
+git clone https://github.com/cjboon/mockvps-kvm.git
+cd mockvps-kvm
 chmod +x mockvps-kvm.sh
 
 ./mockvps-kvm.sh                 # install and wait for SSH
@@ -225,4 +225,4 @@ Installer stall detection: `INSTALL_STALL_WARN` (default 180 s) and `INSTALL_STA
 
 ## License
 
-Add your license here (for example MIT) and include a `LICENSE` file in the repository.
+[MIT](LICENSE)
